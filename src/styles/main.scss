@@ -1,0 +1,89 @@
+@import './variables';
+@import '~@clair/theme-default/styles/index';
+
+// write global styles here
+body {
+  margin: 0;
+  font: 14px/1.5 "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: $--primary-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+a, span[role="link"] {
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid;
+    outline-offset: 2px;
+  }
+}
+
+// you can also override clair styles
+.c-dropdown-menu,
+.c-popover {
+  border: 0;
+}
+
+.c-popover__container {
+  padding: 10px 0;
+}
+
+[x-placement^="bottom"] {
+  margin-top: 6px;
+
+  &::after {
+    display: none;
+  }
+}
+
+.c-card {
+  &__header {
+    padding-left: 20px;
+  }
+
+  &__body {
+    padding: 16px 20px;
+  }
+
+  &__title {
+    font-weight: 500;
+  }
+}
+
+.c-table--normal {
+  th, td {
+    padding: 1em 1.5em;
+  }
+}
+
+// TODO: remove after Clair fixed this
+.c-form-item {
+  flex-wrap: nowrap;
+}
+
+.c-form-item__wrapper {
+  width: 100%;
+  font-size: 14px;
+}
+
+.c-layout__aside {
+  flex-shrink: 0;
+}
+
+.c-timeline-item__content {
+  flex-grow: 1;
+}
+
+.c-card__header {
+  border-bottom-color: #eff0f2;
+}

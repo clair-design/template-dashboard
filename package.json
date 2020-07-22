@@ -1,0 +1,71 @@
+{
+  "name": "clair-template-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "npm run serve:mock",
+    "serve": "vue-cli-service serve",
+    "serve:mock": "cross-env MOCK=true vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test": "vue-cli-service test:unit && vue-cli-service test:e2e --headless",
+    "test:unit": "vue-cli-service test:unit",
+    "test:e2e": "vue-cli-service test:e2e",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@clair/theme-default": "^0.6.0",
+    "@clair/vue": "^0.9.0",
+    "axios": "^0.19.0",
+    "cat-charts-vue": "^0.0.9",
+    "core-js": "^3.4.2",
+    "date-fns": "^2.8.1",
+    "regenerator-runtime": "^0.13.3",
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.6",
+    "vuex": "^3.1.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.0.5",
+    "@vue/cli-plugin-e2e-cypress": "^4.0.5",
+    "@vue/cli-plugin-eslint": "^4.0.5",
+    "@vue/cli-plugin-router": "^4.0.5",
+    "@vue/cli-plugin-unit-jest": "^4.0.5",
+    "@vue/cli-plugin-vuex": "^4.0.5",
+    "@vue/cli-service": "^4.0.5",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/test-utils": "1.0.3",
+    "babel-eslint": "^10.0.1",
+    "commitizen": "^4.0.3",
+    "cross-env": "^7.0.2",
+    "cz-conventional-changelog": "^3.0.2",
+    "eslint": "^7.5.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-vue": "^6.0.1",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "path-to-regexp": "^6.1.0",
+    "prettier": "^2.0.5",
+    "sass": "^1.23.7",
+    "sass-loader": "^9.0.2",
+    "stylelint": "^13.6.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-sass-guidelines": "^7.0.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
+      "pre-commit": "./node_modules/.bin/lint-staged",
+      "pre-push": "npm run test"
+    }
+  },
+  "lint-staged": {
+    "*.{js,vue}": "npm run lint"
+  }
+}

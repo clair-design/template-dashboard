@@ -1,0 +1,7 @@
+// App
+export const TOGGLE_SIDEBAR = 'TOGGLE_SIDEBAR'
+export const TOGGLE_THEME = 'TOGGLE_THEME'
+
+// User
+export const UPDATE_NOTICES = 'UPDATE_NOTICES'
+export const MARK_NOTICE_AS_READ = 'MARK_NOTICE_AS_READ'

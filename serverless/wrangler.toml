@@ -1,0 +1,4 @@
+name = "clair-mock"
+type = "webpack"
+account_id = "0203a986fe1c1cfa49d36bdf447f5dc0"
+workers_dev = true

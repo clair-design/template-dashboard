@@ -1,0 +1,19 @@
+{
+  "name": "clair-mocks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cloudflare/wrangler": "^1.6.0",
+    "qs": "^6.9.1"
+  },
+  "scripts": {
+    "start": "wrangler preview --watch",
+    "dev": "wrangler preview --watch",
+    "build": "wrangler build",
+    "deploy": "wrangler publish"
+  }
+}
